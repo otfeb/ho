@@ -1,0 +1,15 @@
+#box1{
+    border: 3px solid gray;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    font-family: 'Dongle';
+    font-size: 20pt;
+    width: 800px;
+    margin-left: 450px;
+    margin:auto;
+}
+
+ul{
+    list-style: none;
+}

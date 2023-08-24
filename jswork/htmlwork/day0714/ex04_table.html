@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        th.a:hover{
+            background-color: aquamarine;
+        }
+        img.b:hover{
+            transform: scaleX(-1);
+        }
+        img.b:hover:active{
+            transform: scaleY(-1);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" style="width: 300px;">
+        <caption><b>[표 1]</b></caption>
+        <tr height="50" bgcolor="orange">
+            <td align="center">하나</td>
+            <td align="right" valign="top">둘</td>
+            <td valign="bottom" bgcolor="gray">셋</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center">세칸합침!!</td>
+        </tr>
+    </table>
+    <hr>
+
+
+        <table border="1" style="width: 350px;">
+            <caption><b>[표 2]</b></caption>
+            <tr bgcolor="cyan">
+                <th>사진</th>
+                <th style="width: 70px;">이름</th>
+                <th style="width: 40px;">핸드폰</th>
+                <th style="width: 40px;">주소</th>
+            </tr>
+            <tr>
+                <td rowspan="3"><img src="../flower_ani/f10.png"></td>
+                <td>성신이</td>
+                <td>010-222</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>민규</td>
+                <td>010-333</td>
+                <td>마포</td>
+            </tr>
+            <tr>
+                <td>성현이</td>
+                <td>010-444</td>
+                <td>강북</td>
+            </tr>
+           
+        </table>
+
+        <hr>
+        <table border="1" style="width: 350px;">
+            <tr>
+                <th class="a" style="width: 130px;">이름</th>
+                <th class="a">사진</th>
+                <th class="a" style="width: 150px;">신상정보</th>
+            </tr>
+
+            <tr>
+                <td rowspan="5" style="width: 50px;">아이유</td>
+                <td rowspan="5"><img class="b" src="../day0712/뉴진스 쿠키.jpg" width="170px" height="200"></td>
+                <td>93년생</td>
+            </tr>
+            <tr><td>가수</td></tr>
+            <tr><td>전주 이씨</td></tr>
+            <tr><td>O형</td></tr>
+            <tr><td>무교</td></tr>
+        </table>
+        
+   
+</body>
+</html>

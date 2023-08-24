@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gugi&family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap');
+body{
+    font-family: 'Gugi';
+}
+
+.btn{
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-green{
+    background-color: green;
+    color: white;
+}
+
+.btn-pink{
+    background-color: pink;
+    color: black;
+}
+
+.btn-black{
+    background-color: black;
+    color: white;
+}
+
+.btn-brown{
+    background-color: brown;
+    color: aliceblue;
+}

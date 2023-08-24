@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ok(){
+            alert("yes");
+        }
+        window.onload=function(){
+            var no=document.getElementById("btno");
+            no.onclick=function(){
+                alert("no");
+            }
+        }
+
+        
+        function okConfirm(){    
+            var ans=confirm("아침 드셨나요?")
+                if(ans){
+                    alert("예");
+                }
+                else{
+                    alert("아니오");
+                }
+        }
+        
+        
+
+        
+    </script>
+</head>
+<body>
+    <h1>아침밥 드셨나요</h1>
+    <form action="#">
+        <fieldset>
+            <legend>아침식사여부</legend>
+            <input type="button" value="예" onclick="ok()">
+            <input type="button" value="아니오" id="btno">
+        </fieldset>
+    </form>
+
+    <div>
+        <input type="button" value="여기를 눌러보세요" onclick="okConfirm()">
+        
+    </div>
+</body>
+</html>

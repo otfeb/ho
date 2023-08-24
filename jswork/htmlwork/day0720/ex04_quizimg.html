@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container div img{
+            border: 10px inset gray;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var image = document.getElementById("img1");
+
+            document.getElementById("btn1").onclick=function(){
+                image.setAttribute("src","../연예인사진/13.JPG");
+            }
+            document.getElementById("btn2").onclick=function(){
+                image.setAttribute("src","../연예인사진/20.JPG");
+            }
+            document.getElementById("btn3").onclick=function(){
+                image.setAttribute("src","../연예인사진/17.JPG");
+            }
+
+            document.getElementById("btn4").onclick=function(){
+                var w=image.getAttribute("width");
+                w=parseInt(w);
+                w+=10;
+                image.setAttribute("width",w)
+            }
+            document.getElementById("btn5").onclick=function(){
+                var w2=image.getAttribute("width");
+                w2-=10;
+                image.setAttribute("width",w2);
+            }
+
+            //아래문제
+            var selimage=document.getElementById("selimage");
+            var photo=document.getElementById("photo");
+
+            //alert(selimage.value);
+
+            //밑의 코드 의미: select이름과 사진을 동일하게 하기위해서
+            var init_img=selimage.value;
+
+            //현재사진의 src속성을 변경한다
+            photo.setAttribute("src",init_img);
+
+            //select이벤트 _change
+            selimage.onchange=function(){
+                console.log(this.value);
+                photo.setAttribute("src",this.value);
+            }
+
+            //사진의 src에 this.value를 적음
+           
+
+        }
+    </script>
+</head>
+<body>
+    <h3>이미지변경 및 크기</h3>
+    <button type="button" id="btn1">박신혜</button>
+    <button type="button" id="btn2">유아인</button>
+    <button type="button" id="btn3">신민아</button><br><br>
+    <button type="button" id="btn4">점점크게</button>
+    <button type="button" id="btn5">점점작게</button>
+
+    <hr>
+
+    <img src="../Food/1.jpg" width="300" id="img1" border="1">
+
+    <hr>
+
+    <div class="container">
+        <div class="buttons">
+            <button type="button" id="btnsmall">점점작게</button>
+            <button type="button" id="btnlarge">점점크게</button>
+            <b style="margin-left: 20px;">사진선택</b>
+            <select id="selimage">
+                <option value="../연예인사진/12.JPG" selected>박보영</option>
+                <option value="../연예인사진/13.JPG">박신혜</option>
+                <option value="../연예인사진/14.JPG">유승호</option>
+                <option value="../연예인사진/15.JPG">설현</option>
+            </select>
+        </div>
+        <div>
+            <img src="../연예인사진/15.JPG" id="photo" width="300">
+        </div>
+    </div>
+</body>
+</html>

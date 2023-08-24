@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle&family=Gugi&family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>Document</title>
+    <style>
+        li{
+            float: left;
+            margin: 20px;
+            font-family: 'Nanum+Pen+Script';
+            font-size: 15pt;
+        }
+        .box{
+            border: 5px solid orange;
+            text-align: center;
+            padding: 10px;
+            background-color: brown;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("li").each(function(i){
+                $(this).hover(function(){
+                    $(this).addClass("box");
+                },function(){
+                    $(this).removeClass("box");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>질문게시판</li>
+        <li>Q&A</li>
+        <li>공지사항</li>
+        <li>오시는길</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h4>html(): 자바스크립트의 innerHTML()에 해당</h4>
+    <h4>text(): 자바스크립트의 innerHTML()에 해당</h4>
+    <h4>append(): 추가</h4>
+    <hr>
+    <h2>1</h2>
+    <h2>2</h2>
+    <h2>3</h2>
+
+    <script>
+        //h2중에서 1번째에 html태그 넣기
+        //$("h2").eq(0).html("<b>H2태그입니다</b>");
+        $("h2:eq(0)").html("<b>H2태그입니다</b>");
+
+        //h2태그중에서 2번째에 text로 2번째 h2태그입니다
+        $("h2:eq(1)").text("<b>2번째 h2태그입니다</h>");
+
+        //h2마지막태그에 html로 구문 넣고 css(글꼴색) 넣기
+        $("h2:eq(2)").html("<b>마지막 H2태그입니다</b>").css("color","pink");
+
+        //append는 기존값 뒤에 추가
+        $("h2:eq(0)").append("<img src='../flower_ani/f1.png'>");
+
+        //3번째 h2태그 뒤에 이미지넣고 너비,높이 100
+        $("h2:last").append("<img src='../flower_ani/f2.png'>");
+        $("h2:last>img").css({
+            "width":"100px",
+            "height":"100px"
+        })
+
+        //이벤트
+        //첫번째 h2를 클릭시 자기가 가지고있는 text를 alert으로 반환
+        $("h2:first").click(function(){
+            alert($(this).text());
+        }).css("cursor","pointer");
+
+        //마지막 h2 클릭시 자신의 html을 경고창에 반환
+        $("h2:last").click(function(){
+            alert($(this).html());
+        }).css("cursor","pointer");
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 150px;
+        }
+
+
+        #box{
+            border: 1px solid gray;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <script>
+        
+        window.onload=function(){
+            var img1=document.getElementById("img1");
+            img1.onmouseover=function(){
+                img1.setAttribute("src","../Food/3.jpg");
+            }
+            img1.onmouseout=function(){
+                img1.setAttribute("src","../Food/1.jpg");
+            }
+            img1.onclick=function(){
+                img1.setAttribute("src","../Food/5.jpg");
+            }
+
+            var cw=document.getElementById("cw");
+            cw.onclick=function(){
+                var info=document.getElementById("cwinfo");
+                var get=cw.getAttribute("src");
+                var get2=cw.getAttribute("width");
+                var get3=cw.getAttribute("height");
+
+                info.innerHTML=get+"<br>"+get2+"<br>"+get3+"<br>"
+                
+            }
+
+            document.getElementById("btn").onclick=function(){
+                var name=prompt("what's your name?");
+                var get=name;
+                var box=document.getElementById("box");
+                box.innerHTML=get;
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- 1.만화이미지 01.png~10.png까지 출력하세요(for문 이용) -->
+    <script>
+        for(var i=1;i<=10;i++){
+            if(i==10){
+                document.write("<img src='../만화이미지/"+i+".PNG' width='80'>");
+            }
+            else{
+                document.write("<img src='../만화이미지/0"+i+".PNG' width='80'>");
+            }
+        }
+    </script>
+
+    <hr>
+
+    <!-- 2.음식사진 1.jpg를 img태그로 나타낸후 id를 img1으로 주고 그아이디로 이벤트 추가합니다
+    사진에 마우스를 올리면 3.jpg로 바뀌고 클릭하면 5.jpg로 바뀌며 마우스를 벗어나면 다시 원래사진으로 돌아가게 이벤트 주기 -->
+    <img src="../Food/1.jpg" id="img1" width="400">
+
+    <hr>
+
+    <!-- 3.img로 width=200 height=180으로 사진(아무거나) body에 넣은후 이미지를 클릭하면 아래 div태그안에 각종정보(src,width,height)를 얻어서 출력하시오(getAttribute,innerHTML 사용) -->
+    
+    <img src="../day0712/김채원1.jpg" width="200" height="180" id="cw">
+    <div id="cwinfo"></div>
+
+    <hr>
+
+    <!-- 4.버튼을 하나 만든후 클릭하면 prompt창에 이름을 입력받아서 div태그안에 "내이름은 ***입니다" 라고 출력하세여
+    (div에 class="bts" 라고 준후 css로 예쁘게 스타일 적용) -->
+    <div style="text-align: center;" id="div1">
+        <button type="button" id="btn">버튼</button>
+        <div class="bts" id="box"></div>
+    </div>
+    
+</body>
+</html>

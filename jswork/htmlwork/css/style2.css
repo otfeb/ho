@@ -1,0 +1,22 @@
+div{
+    border: 1px solid black;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin: 10px 10px 20px 10px;
+    background-color: coral;
+    box-shadow: 5px 5px 5px black;
+    border-style: none;
+    font-size: x-large;
+    
+}
+
+hr{
+    clear:both;
+}
+img{
+    margin: 10px;
+}

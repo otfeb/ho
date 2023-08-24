@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/buttonStyle.css">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 500px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 22px;
+            text-align: center;
+            border: 2px solid gray;
+            margin-top: 20px;
+            background: url('../flower_ani/f15.png') no-repeat right bottom;
+            background-size: 50px 60px;
+        }
+        #imga{
+            border: 5px inset tomato;
+            margin: 30px 150px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            //div요소값
+            var r=document.getElementById("result");
+
+            //img요소값
+            var photo=document.getElementById("imga");
+
+            //버튼1이벤트
+            document.getElementById("btn1").onclick=function(){
+                //사진의 현재 width값
+                var width=photo.getAttribute("width");
+                //프롬프트 창에 이미지너비를 입력해주세요
+                //입력하면 그것이 포토의 너비에 적용
+                //취소시 이미지 변경안할래 라는 경고창
+                var scanner = prompt("너비를 입력해주세요");
+                    if(scanner==null){
+                        alert("이미지 변경안할래");
+                    }
+                    else{
+                      photo.setAttribute("width",scanner)
+                    }
+                }
+
+                //이벤트 2버튼을 누르면 prompt창에 1~20사이의 연예인사진번호를 입력
+                //취소시 경고창에 '안바꿀래''
+                //21번을 누르면 '1~20까지라 했잖아' 함수종료(return)
+                //1이라하면 현재사진이 1로 바뀜
+                document.getElementById("btn2").onclick=function(){
+                    var scanner2 = prompt("1~20 연예인사진번호 입력");
+                        if(scanner2==null){
+                            alert("안바꿀래");
+                        }
+                        else{
+                            if(scanner2>=21 || scanner2<=0){
+                            alert("1~20까지라 했잖아");
+                            return;
+                            }
+                            else{
+                            photo.setAttribute("src","../연예인사진/"+scanner2+".jpg");
+                            }
+                        }     
+                }
+
+                document.getElementById("btn3").onclick=function(){
+
+                    //innerText: text를 넣는다(태그가 노출)
+                    //innerHTML: html을 넣는다(태그가 적용됨)
+
+                    var name=prompt("당신의 이름은?");
+
+                    if(name==null){
+                        r.innerText="<u>취소를 눌렀네요!!</u>"
+                    }
+                    else{
+                        r.innerHTML="<u>당신의 이름은"+name+"이군요</u>"
+                    }
+                }
+            }
+
+    </script>
+</head>
+<body>
+    <button type="button" class="btn btn-green" id="btn1">이벤트#1</button>
+    <button type="button" class="btn btn-pink" id="btn2">이벤트#2</button>
+    <button type="button" class="btn btn-brown" id="btn3">이벤트#3</button>
+    <div id="result">테스트</div>
+    <img src="../연예인사진/17.jpg" width="250" id="imga">
+</body>
+</html>

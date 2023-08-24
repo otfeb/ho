@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 css -->
+    <link rel="stylesheet" href="../css/buttonStyle.css">
+
+    <script>
+        function hello(){
+            var con=confirm("정말 삭제하시렵니까?")
+                if(con)
+                    alert("그러믄요")
+                else
+                    alert("취소요")
+        }
+        
+        window.onload=function(){
+            document.getElementById("btn3").onclick=function(){
+                var name=prompt("당신의 이름은?");
+
+                if(name==null)
+                    alert("취소를 눌렀네?");
+                else
+                    alert("이름은 "+name+"이다");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button class="btn btn-black" type="button" onclick="alert('안녕하시오?')">alert</button>
+    <button class="btn btn-green" type="button" onclick="hello()">confirm</button>
+    <input class="btn btn-pink" type="button" value="prompt" id="btn3">
+</body>
+</html>
