@@ -16,10 +16,6 @@
 </style>
 </head>
 <body>
-<<<<<<< HEAD
 <img alt="" src="image/car1.jpg" style="width: 900px; height: 600px;">
-=======
-<img alt="" src="image/dogi.gif" style="width: 900px; height: 600px;">
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 </body>
 </html>

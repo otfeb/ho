@@ -23,11 +23,8 @@
 	<i class="bi bi-telephone-forward-fill"></i>&nbsp;02-1111-4444<br>
 	<i class="bi bi-geo-alt"></i>&nbsp;서울시 강남구 역삼동<br>
 	<i class="bi bi-envelope-at"></i>&nbsp;sist@gmail.com<br><br>
-<<<<<<< HEAD
+	
 	<img src="image/dogi.gif" style="width: 180px;">
-=======
-	<img src="image/mush.gif" style="width: 100px;">
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 </div>
 </body>
 </html>

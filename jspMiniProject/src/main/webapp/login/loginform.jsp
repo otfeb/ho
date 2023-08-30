@@ -10,7 +10,6 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 </head>
-<<<<<<< HEAD
 <%
 	String saveok=(String)session.getAttribute("saveok");
 	String myid="";
@@ -50,9 +49,6 @@
 		</table>
 	</form>
 </div>
-=======
 <body>
-
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 </body>
 </html>

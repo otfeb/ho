@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 <%@page import="data.dao.memberDao"%>
-=======
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +12,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
 	<div style="margin: 100px 200px;">
 		<img alt="" src="image/mushmom.webp" width="200" align="left">
 		
@@ -32,8 +28,5 @@
 		<b><%=name %>님이 로그인하셨습니다</b>
 		<button type="button" class="btn btn-danger" onclick="location.href='login/logoutaction.jsp'">로그아웃</button>
 	</div>
-=======
-
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 </body>
 </html>

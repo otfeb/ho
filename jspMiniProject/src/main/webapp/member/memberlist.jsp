@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@page import="data.dto.memberDto"%>
 <%@page import="data.dao.memberDao"%>
-=======
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,7 +13,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
-<<<<<<< HEAD
 <script type="text/javascript">
 	function delfunc(num) {
 		var yes=confirm("강퇴처리 하시겠습니까?");
@@ -63,10 +59,7 @@
 			<%}
 		%>
 	</table>
-=======
 </head>
 <body>
-
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 </body>
 </html>

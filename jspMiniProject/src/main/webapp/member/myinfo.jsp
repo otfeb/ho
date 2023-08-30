@@ -12,6 +12,19 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
+<script type="text/javascript">
+	$(function(){
+		$(".btndelete").click(function(){
+			var num=$(this).attr("num");
+			//alert(num);
+			var ans = confirm("정말 탈퇴하시겠어요?");
+			
+			if(ans){
+				location.href="member/deleteme.jsp?num="+num;
+			}
+		});
+	});
+</script>
 </head>
 <%
 memberDao dao=new memberDao();
@@ -31,7 +44,7 @@ String loginok=(String)session.getAttribute("loginok");
 					<td>이름: <%=dto.getName() %></td>
 					<td width= "200" align= "center" valign= "middle" rowspan= "5">
 						<button type="button" class="btn btn-outline-info" onclick="location.href='index.jsp?main=member/updateform.jsp?num=<%=dto.getNum()%>'">수정</button>
-						<button type="button" class="btn btn-outline-danger" onclick="location.href=''">삭제</button>
+						<button type="button" class="btn btn-outline-danger btndelete" num=<%=dto.getNum() %>>탈퇴</button>
 					</td>
 				</tr>
 				<tr>

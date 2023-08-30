@@ -4,11 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-<<<<<<< HEAD
+
 import java.util.ArrayList;
 import java.util.List;
-=======
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 
 import data.dto.memberDto;
 import mysql.db.DBConnect;
@@ -99,7 +97,6 @@ public class memberDao {
 			db.dbClose(pstmt, conn);
 		}
 	}
-<<<<<<< HEAD
 	
 	//전체회원목록
 	public List<memberDto> getAllMembers(){
@@ -248,6 +245,4 @@ public class memberDao {
 		}
 		return b;
 	}
-=======
->>>>>>> 5749c17c491dae52e414b438e78f8152c8fda9bb
 }
