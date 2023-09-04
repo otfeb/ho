@@ -88,6 +88,19 @@ String myid = (String) session.getAttribute("myid");
 								<li><a href="<%=root%>/index.jsp?main=board/smartform.jsp">스마트게시판</a></li>
 							</ul></li>
 						<li><a href="<%=root%>/index.jsp?main=load/map.jsp">찾아오시는 길</a></li>
+						<li class="parent"><a href="#">쇼핑몰</a>
+							<ul class="sub-menu">
+								<%
+								if(loginok!=null && myid.equals("admin")){
+									%>
+									<li><a href="<%=root%>/index.jsp?main=shop/addform.jsp"><i class="icon-gift"></i>상품등록</a>
+								<%}
+								%>
+								
+								<li><a href="<%=root%>/index.jsp?main=shop/shoplist.jsp">상품목록</a></li>
+								
+							</ul>
+						</li>
 					</ul>
 				</nav>
 				<div class="clear"></div>
